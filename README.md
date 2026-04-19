@@ -1,10 +1,11 @@
-🛩️ #Drone Impact & Drop Detection Tag (v1)#
+🛩️ **Drone Impact & Drop Detection Tag (v1)**
+
 A lightweight, self‑calibrating IMU‑based sensor tag for detecting impacts, drops, and abnormal vibration events on drones.
 Built using an MPU6050, an ESP32, and a dynamic baseline envelope algorithm that adapts to each drone’s natural vibration profile.
 
 This is v1, the first fully working prototype.
 
-#Features#
+**Features**
 ✅ Dynamic Baseline Calibration
 Collects min/max acceleration magnitude during startup
 
@@ -79,7 +80,7 @@ No false positives during idle testing
 
 These results confirm the system’s ability to distinguish real events from noise.
 
-#How It Works#
+**How It Works**
 1. Calibration Phase
 On startup, the device samples 200 readings and computes:
 
@@ -105,7 +106,7 @@ Thresholds determine event severity.
 3. Risk Accumulation
 Events add to a cumulative risk score, which maps to a system state.
 
-🛠️ #Hardware#
+🛠️ **Hardware**
 ESP32 
 
 MPU6050 IMU
@@ -118,7 +119,7 @@ SDA → 21
 
 SCL → 22
 
-#Installation#
+**Installation**
 Clone the repo
 
 Install Arduino libraries:
@@ -135,15 +136,15 @@ Keep the drone idle during calibration
 
 Begin testing
 
-🔮 #Roadmap (v2 and beyond)#
+🔮 **Roadmap (v2 and beyond)**
 v2 — In‑Flight Rolling Baseline Calibration
 
 Add EMA‑based rolling baseline updates
 Reduce false positives during flight
 Improve robustness across drones and mounting positions
 
-#Future Additions#
-BLE or WiFi event streaming
+**Future Additions**
+BLE streaming
 
 SD card logging
 
